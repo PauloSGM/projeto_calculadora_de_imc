@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
     <title>Calculadora de IMC</title>
 </head>
-<body>
-<div>
+<body class="bg-success">
+<div class="container">
         <h1>Calculadora de IMC (Índice de Massa Corpórea)</h1>
         <p>Complete suas informações</p>
-        <form>
-<fieldset> 
+        <form class="form-group border border-warning">
+<fieldset>
 <div>
     <label>Digite seu peso</label>
     <input type="number" id= "peso" required min="40" placeholder="68 kg" max="200"> kg
@@ -28,7 +29,7 @@
 </fieldset>
 <div>
     <br>
-    <input type="button" id="calcular" value="Calcular">
+    <input class="btn btn-primary" type="button" id="calcular" value="Calcular">
     <br>
     <br>
     
