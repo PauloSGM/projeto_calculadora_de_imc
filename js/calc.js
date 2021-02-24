@@ -1,18 +1,22 @@
 
 
-            const calcularBtn = document.getElementById('calcular');
-            const a = document.getElementById('peso');
-            const b = document.getElementById('altura');
+const calcularBtn = document.getElementById('calcular');
+const a = document.getElementById('peso');
+const b = document.getElementById('altura');
 
-            function mudaCor(){
-                document.getElementById(res).style.fontcolor = '#ed0909';	
-                 }
+function mudaCor() {
+    document.getElementById(res).style.fontcolor = '#ed0909';
+}
 
-            calcularBtn.addEventListener("click", function () {
-                let res = a.value / (b.value * b.value);
-                console.log(res);
-                let arredondando = parseFloat(res.toFixed(0));
-                if (res > 30) { document.getElementById("totalAlto").innerHTML = arredondando + " Foi o resultado do seu IMC. Seu resultado deu acima do permitido. Procure acompanhamento médico."; }
-                else document.getElementById("totalOk").innerHTML = arredondando + " Foi o resultado do seu IMC. Parabéns! Seu resultado está dentro do limite aceitável. Continue cuidando de seu peso.";
-                    ;
-            });
+calcularBtn.addEventListener("click", function () {
+    let res = a.value / (b.value * b.value);
+    console.log(res);
+    let arredondando = parseFloat(res.toFixed(1));
+    if (res > 30) {
+        document.getElementById("totalAlto").innerHTML = arredondando + " é o cálculo do seu IMC. Seu resultado deu acima do permitido. Procure acompanhamento médico.";
+    }
+    else if (res < 18) {
+        document.getElementById("totalBaixo").innerHTML = arredondando + " é o cálculo do seu IMC. Tenha cuidado. Seu resultado está abaixo do limite aceitável. Procure um especialista.";
+    }
+    else document.getElementById("totalOk").innerHTML = arredondando + " é o cálculo do seu IMC. Parabéns! Seu resultado está dentro do limite aceitável. Continue cuidando de seu peso.";
+});
