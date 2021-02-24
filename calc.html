@@ -1,56 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-
     <title>Calculadora de IMC</title>
 </head>
+
 <body class="bg-light">
 
-    <div class="alert alert-danger" role="alert">
-        <h4 class="alert-heading">Atenção</h4>
-        <p>Teste de calculadora de IMC</p>
-      </div>
-<div class="container-fluid">
+    <div class="container-fluid">
         <h1>Calculadora de IMC (Índice de Massa Corpórea)</h1>
         <p>Complete suas informações</p>
-        <form class="form-group border border-warning">
-<fieldset>
-<div>
-    <label>Digite seu peso</label>
-    <input type="number" id= "peso" required min="40" placeholder="68 kg" max="200"> kg
-</div> 
-<div>
-    <label>Digite sua altura</label>
-    <input type="number" id="altura" required min="1.50" step="0.10" max="2.20" placeholder="1.76"> metros
-</div>
-<div>
-    <label>Digite sua idade</label>
-    <input type="number" id="idade" required min="0" max="100" placeholder="33 anos"> anos
-</div>
-</fieldset>
-<div>
-    <br>
-    <input class="btn btn-primary" type="button" id="calcular" value="Calcular">
-    <br>
-    <br>
-    
-<label>Seu IMC é:</label>
-</div>
-</form>
-<script>
-const calcularBtn = document.getElementById('calcular')
-const a = document.getElementById('peso')// .value pega o valor vazio no começo, e nunca mais muda, sacou? -- Sim! -- Top de linha.
-const b = document.getElementById('altura')
-
-calcularBtn.addEventListener("click", function() {
-  let res = a.value / (b.value * b.value)
-  console.log(res)
-});
-
-//console.log(calculaTudo())
-</script>
+        <form class="form-group">
+            <fieldset>
+                <div>
+                    <label>Digite seu peso</label>
+                    <input type="number" id="peso" required min="40" placeholder="68 kg" max="300"> kg
+                </div>
+                <div>
+                    <label>Digite sua altura</label>
+                    <input type="number" id="altura" required min="1.50" step="0.10" max="2.20" placeholder="1.76">
+                    metros
+                </div>
+                <div>
+                    <label>Digite sua idade</label>
+                    <input type="number" id="idade" required min="0" max="100" placeholder="33 anos"> anos
+                </div>
+            </fieldset>
+            <div>
+                <br>
+                <button class="btn btn-primary" type="button" id="calcular" value="Calcular">Calcular</button>
+                <br>
+                <br>
+                <h1>Seu IMC é:
+                    <h1 class="text-success" id="totalOk"></h1>
+                    <h1 class="text-danger" id="totalAlto"></h1>
+                </h1>
+            </div>
+        </form>
+        <script src="./js/calc.js"></script>
 </body>
+
 </html>
