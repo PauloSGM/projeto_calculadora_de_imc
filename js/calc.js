@@ -4,10 +4,6 @@ const calcularBtn = document.getElementById('calcular');
 const a = document.getElementById('peso');
 const b = document.getElementById('altura');
 
-function mudaCor() {
-    document.getElementById(res).style.fontcolor = '#ed0909';
-}
-
 calcularBtn.addEventListener("click", function () {
     document.getElementById("totalAlto").innerHTML = "";
     document.getElementById("totalBaixo").innerHTML = "";
