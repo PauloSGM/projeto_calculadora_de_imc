@@ -9,6 +9,9 @@ function mudaCor() {
 }
 
 calcularBtn.addEventListener("click", function () {
+    document.getElementById("totalAlto").innerHTML = "";
+    document.getElementById("totalBaixo").innerHTML = "";
+    document.getElementById("totalOk").innerHTML = "";
     let res = a.value / (b.value * b.value);
     console.log(res);
     let arredondando = parseFloat(res.toFixed(1));
