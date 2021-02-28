@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Calculadora de IMC</title>
 </head>
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-light row">
+        <nav class="navbar row">
             <h1 style="text-align: center;">Calculadora de IMC (Índice de Massa Corpórea)</h1>
         </nav>
         <p>Complete suas informações</p>
@@ -19,18 +19,19 @@
             <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Digite seu peso</span>
             </div>
-            <input type="number" class="form-control" id="peso" placeholder="68 kg" max="300" aria-label="Peso" required
-                min="5" aria-describedby="basic-addon1">
+            <input style="width: auto;" type="number" class="form-control" id="peso" placeholder="68 kg" max="300"
+                aria-label="Peso" required min="5" aria-describedby="basic-addon1">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Digite sua altura</span>
             </div>
-            <input type="number" id="altura" required min="1.40" step="0.01" max="2.20" placeholder="1.76"
-                class="form-control" placeholder="68 kg" max="300" aria-label="Altura" aria-describedby="basic-addon1">
+            <input style="width: auto;" type="number" id="altura" required min="1.40" step="0.01" max="2.20"
+                placeholder="1.76m" class="form-control" placeholder="68 kg" max="300" aria-label="Altura"
+                aria-describedby="basic-addon1">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Digite sua idade</span>
             </div>
-            <input type="number" id="idade" required min="0" max="100" placeholder="33 anos" aria-label="Idade"
-                aria-describedby="basic-addon1">
+            <input style="width: auto;" type="number" id="idade" required min="0" max="100" placeholder="33"
+                aria-label="Idade" aria-describedby="basic-addon1">
         </div>
 
         <br>
@@ -43,19 +44,20 @@
         <div class="row">
             <h3>Confira abaixo seu resultado:</h3>
 
+            <div class="alert alert-warning" role="alert">Magreza, quando o resultado é menor que 18,5
+                <h4 id="totalMagro"></h4>
+            </div>
+
             <div class="alert alert-success" role="alert">Normal, quando o resultado está entre 18,5 e 24,9
                 kg/m
-                <h4 id="totalOtimo"></h4>
+                <h4 id="totalNormal"></h4>
             </div>
             <div class="alert alert-primary" role="alert">Sobrepeso, quando o resultado está entre 24,9
-                kg/m
-                <h4 id="totalBom"></h4>
-            </div>
-            <div class="alert alert-warning" role="alert">Magreza, quando o resultado é menor que 18,5
-                <h4 id="totalAtencao"></h4>
+                kg/m e 30 kg/m
+                <h4 id="totalSobre"></h4>
             </div>
             <div class="alert alert-danger" role="alert">Obesidade, quando o resultado é maior que 30
-                <h4 id="totalCuidado"></h4>
+                <h4 id="totalObeso"></h4>
             </div>
         </div>
     </div>
