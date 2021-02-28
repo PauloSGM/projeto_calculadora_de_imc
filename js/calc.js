@@ -1,8 +1,14 @@
 
 
 const calcularBtn = document.getElementById('calcular');
+const limpaBtn = document.getElementById('limpar');
 const a = document.getElementById('peso');
 const b = document.getElementById('altura');
+
+limpaBtn.addEventListener("click", function (){
+   document.getElementById("peso").value = "0";
+   document.getElementById("altura").value = "0";
+});
 
 calcularBtn.addEventListener("click", function () {
     document.getElementById("totalMagro").innerHTML = "";
