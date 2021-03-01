@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+    
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/calculadoras.css">
@@ -16,26 +17,25 @@
     <div class="card-calculadora-row">
         <section class="section section-md bg-gray-100" id="main-content">
             <div class="container-fluid container-fluid-calculadora wow fadeIn"
-                style="visibility: visible; animation-name: fadeIn;">
+                style="visibility: visible;">
                 <div class="container-calculadora">
-                    <p class="title-card-calculadora">Digite seus dados abaixo</p>
+                    <p class="title-card-calculadora">Caculadora de IMC</p>
                     <form id="form-calc-compound-interest">
                         <div class="card-calculadora-row">
                             <div class="card-calculadora-col">
                                 <div class="input-group input-group-lg"><span class="input-group-addon"
-                                        >Altura</span> <input id="altura" type="number" required
-                                        min="1.40" step="0.01" max="2.20" class="form-control" placeholder="1.68"
+                                        >Altura</span> <input id="altura" type="number" min="1.40" step="0.01" max="2.20" class="form-control" placeholder="1.68"
                                         aria-describedby="sizing-addon1"></div>
                             </div>
                             <div class="card-calculadora-col">
                                 <div class="input-group input-group-lg"><span class="input-group-addon">Peso</span>
-                                    <input id="peso" required min="35" type="number" class="form-control"
+                                    <input id="peso" required min="35" max="200" type="number" class="form-control"
                                         placeholder="60 kg" aria-describedby="sizing-addon2"></div>
                             </div>
                         </div>
                         <div class="card-calculadora-row row-action"><button type="button" value="Calcular" class="btn btn-lg btn-save"
-                                id="calcular">Calcular</button> <button id="limpar" value="Limpar" type="button"
-                                class="btn btn-lg btn-clean">Limpar</button></div>
+                                id="calcular"><a a href="#resultado" style="color: white;">Calcular</a></button> <button id="limpar" value="Limpar" type="button"
+                                class="btn btn-lg btn-clean"></button></div>
                     </form>
 
                 </div>
@@ -47,7 +47,7 @@
 
         <div class="row">
 
-            <h3>Confira abaixo seu resultado:</h3>
+            <h3 id="resultado">Confira abaixo seu resultado:</h3>
 
             <div class="alert alert-warning" role="alert">Magreza, quando o resultado é menor que 18,5
                 <h4 id="totalMagro"></h4>
@@ -97,7 +97,10 @@
             de gordura acumulada no corpo e maior é o risco da pessoa ter pressão alta, diabetes
             e doenças cardíacas.</p>
     </div>
+
     <script src="./js/calc.js"></script>
+    
+
 </body>
 
 </html>
