@@ -12,14 +12,14 @@
     <title>Calculadora de IMC</title>
 </head>
 
-<body class="bg-gray-100">
+<body>
 
     <div class="card-calculadora-row">
-        <section class="section section-md bg-gray-100" id="main-content">
+        <section class="section section-md" id="main-content">
             <div class="container-fluid container-fluid-calculadora wow fadeIn"
                 style="visibility: visible;">
                 <div class="container-calculadora">
-                    <p class="title-card-calculadora">Caculadora de IMC</p>
+                    <p class="title-card-calculadora">Caculadora de IMC <br> <small>Digite suas informações abaixo</small></p>
                     <form id="form-calc-compound-interest">
                         <div class="card-calculadora-row">
                             <div class="card-calculadora-col">
@@ -35,7 +35,7 @@
                         </div>
                         <div class="card-calculadora-row row-action"><button type="button" value="Calcular" class="btn btn-lg btn-save"
                                 id="calcular"><a a href="#resultado" style="color: white;">Calcular</a></button> <button id="limpar" value="Limpar" type="button"
-                                class="btn btn-lg btn-clean"></button></div>
+                                class="btn btn-lg btn-warning"><a style="color: white;">Limpar</a></button></div>
                     </form>
 
                 </div>
@@ -49,7 +49,7 @@
 
             <h3 id="resultado">Confira abaixo seu resultado:</h3>
 
-            <div class="alert alert-warning" role="alert">Magreza, quando o resultado é menor que 18,5
+            <div class="alert alert-warning" role="alert">Magreza, quando o resultado é menor que 18,5 kg/m
                 <h4 id="totalMagro"></h4>
             </div>
 
@@ -100,7 +100,8 @@
 
     <script src="./js/calc.js"></script>
     
-
+    <p style="background:rgb(0, 209, 181);font-size:12px;margin:15px 0;padding:15px;text-align:center">
+        © 2021 Copyright. Todos os direitos reservados a Paulo Moura.</p>
 </body>
 
 </html>
